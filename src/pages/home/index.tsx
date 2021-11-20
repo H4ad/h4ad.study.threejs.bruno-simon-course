@@ -3,7 +3,8 @@ import * as S from './styles';
 
 const lessons = [
   { link: 'lessons/03', name: 'Aula 03 - Cena Básica' },
-  { link: 'lessons/05', name: 'Aula 03 - Transformando Objetos' },
+  { link: 'lessons/05', name: 'Aula 05 - Transformando Objetos' },
+  { link: 'lessons/06', name: 'Aula 06 - Animações' },
 ];
 
 function Home(): ReactElement {
