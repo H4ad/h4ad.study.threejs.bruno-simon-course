@@ -3,6 +3,7 @@ import * as S from './styles';
 
 const lessons = [
   { link: 'lessons/03', name: 'Aula 03 - Cena Básica' },
+  { link: 'lessons/05', name: 'Aula 03 - Transformando Objetos' },
 ];
 
 function Home(): ReactElement {
