@@ -6,6 +6,7 @@ const Home = lazy(() => import('./pages/home'));
 const Lesson03 = lazy(() => import('./pages/03_basic_scene'));
 const Lesson05 = lazy(() => import('./pages/05_transform_objects'));
 const Lesson06 = lazy(() => import('./pages/06_animations'));
+const Lesson07 = lazy(() => import('./pages/07_cameras'));
 
 function App(): ReactElement {
   return (
@@ -17,6 +18,7 @@ function App(): ReactElement {
           <Route path="lessons/03" element={ <Lesson03/> }/>
           <Route path="lessons/05" element={ <Lesson05/> }/>
           <Route path="lessons/06" element={ <Lesson06/> }/>
+          <Route path="lessons/07" element={ <Lesson07/> }/>
         </Routes>
       </Suspense>
     </>

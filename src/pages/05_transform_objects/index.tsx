@@ -1,5 +1,5 @@
 import { Stats } from '@react-three/drei';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { ReactElement } from 'react';
 import { Vector3 } from 'three';
 import { useObjectControls } from '../../hooks/useObjectControls';
@@ -7,8 +7,7 @@ import { useObjectControls } from '../../hooks/useObjectControls';
 import * as S from './styles';
 
 function Scene() {
-  const camera = useThree((state) => state.camera);
-  const refObject3d = useObjectControls(camera);
+  const refObject3d = useObjectControls();
 
   return (<>
     <Stats/>

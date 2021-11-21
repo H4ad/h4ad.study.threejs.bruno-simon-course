@@ -1,33 +1,36 @@
-import { useControls } from 'leva';
+import { useThree } from '@react-three/fiber';
+import { folder, useControls } from 'leva';
 import { SpecialInputs } from 'leva/plugin';
 import { RefObject, useEffect, useRef } from 'react';
-import { Camera } from 'three';
 import { Object3D } from 'three/src/core/Object3D';
 
-export function useObjectControls(cameraRef: Camera): RefObject<Object3D> {
+export function useObjectControls(): RefObject<Object3D> {
+  const camera = useThree(state => state.camera);
   const ref = useRef<Object3D>(null);
 
   const { position, scale, rotation, reorder } = useControls({
-    position: {
-      value: { x: 0, y: 0, z: 0 },
-      step: 0.2,
-    },
-    scale: {
-      value: { x: 1, y: 1, z: 1 },
-      step: 0.2,
-    },
-    rotation: {
-      value: { x: 0, y: 0, z: 0 },
-      step: 0.1,
-    },
-    reorder: {
-      options: ['XYZ', 'YXZ'],
-    },
-    lookAtCamera: {
-      label: 'Look At Camera',
-      type: SpecialInputs.BUTTON,
-      onClick: () => ref.current && cameraRef.lookAt(ref.current.position),
-    },
+    object: folder({
+      position: {
+        value: { x: 0, y: 0, z: 0 },
+        step: 0.2,
+      },
+      scale: {
+        value: { x: 1, y: 1, z: 1 },
+        step: 0.2,
+      },
+      rotation: {
+        value: { x: 0, y: 0, z: 0 },
+        step: 0.1,
+      },
+      reorder: {
+        options: ['XYZ', 'YXZ'],
+      },
+      lookAtCamera: {
+        label: 'Look At Camera',
+        type: SpecialInputs.BUTTON,
+        onClick: () => ref.current && camera.lookAt(ref.current.position),
+      },
+    }),
   });
 
   useEffect(() => {

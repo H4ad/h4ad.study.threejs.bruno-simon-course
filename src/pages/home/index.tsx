@@ -5,6 +5,7 @@ const lessons = [
   { link: 'lessons/03', name: 'Aula 03 - Cena Básica' },
   { link: 'lessons/05', name: 'Aula 05 - Transformando Objetos' },
   { link: 'lessons/06', name: 'Aula 06 - Animações' },
+  { link: 'lessons/07', name: 'Aula 07 - Cameras' },
 ];
 
 function Home(): ReactElement {
