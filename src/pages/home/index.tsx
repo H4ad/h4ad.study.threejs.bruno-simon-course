@@ -13,11 +13,11 @@ function Home(): ReactElement {
       <S.Title>Bem-vindo aos meus estudos de ThreeJS</S.Title>
 
       <ul>
-        <li>
-          { lessons.map(lesson => (
-            <S.Link key={lesson.link} to={ lesson.link }>{ lesson.name }</S.Link>
-          )) }
-        </li>
+        { lessons.map(lesson => (
+          <S.ListItem key={ lesson.link }>
+            <S.Link to={ lesson.link }>{ lesson.name }</S.Link>
+          </S.ListItem>
+        )) }
       </ul>
     </S.Container>
   );
