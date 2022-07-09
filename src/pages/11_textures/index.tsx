@@ -171,11 +171,6 @@ function Scene() {
   </>);
 }
 
-/**
- * No fim, só foi possível estudar a parte de fullscreen,
- * toda a parte de resizing é feito automaticamente pelo
- * react-fiber.
- */
 function BasicScene(): ReactElement {
   return (
     <S.Container>

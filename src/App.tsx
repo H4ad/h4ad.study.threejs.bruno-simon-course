@@ -9,6 +9,7 @@ const Lesson06 = lazy(() => import('./pages/06_animations'));
 const Lesson07 = lazy(() => import('./pages/07_cameras'));
 const Lesson08 = lazy(() => import('./pages/08_fullscreen_and_resizing'));
 const Lesson11 = lazy(() => import('./pages/11_textures'));
+const Lesson12 = lazy(() => import('./pages/12_materials'));
 
 function App(): ReactElement {
   return (
@@ -23,6 +24,7 @@ function App(): ReactElement {
           <Route path="lessons/07" element={ <Lesson07/> }/>
           <Route path="lessons/08" element={ <Lesson08/> }/>
           <Route path="lessons/11" element={ <Lesson11/> }/>
+          <Route path="lessons/12" element={ <Lesson12/> }/>
         </Routes>
       </Suspense>
     </>

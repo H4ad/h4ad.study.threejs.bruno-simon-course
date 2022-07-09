@@ -8,6 +8,7 @@ const lessons = [
   { link: 'lessons/07', name: 'Aula 07 - Cameras' },
   { link: 'lessons/08', name: 'Aula 08 - FullScreen e Resizing' },
   { link: 'lessons/11', name: 'Aula 11 - Texturas' },
+  { link: 'lessons/12', name: 'Aula 12 - Materiais' },
 ];
 
 function Home(): ReactElement {
